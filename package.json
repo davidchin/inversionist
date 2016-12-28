@@ -1,14 +1,31 @@
 {
-  "name": "dependency-inversion",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "inversionist",
+  "version": "0.1.0",
+  "description": "A lightweight dependency injection container for JavaScript",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf lib && tsc",
+    "coverage": "nyc --extension .ts npm test",
+    "lint": "tslint ./**/*.ts",
+    "prepublish": "npm run lint && npm run coverage && npm run build",
+    "test": "mocha --compilers ts:ts-node/register ./test"
   },
-  "author": "",
+  "author": "David Chin",
   "license": "MIT",
+  "engines": {
+    "node": ">= 6.9"
+  },
   "devDependencies": {
-    "typescript": "2.1.4"
+    "@types/chai": "~3.4.34",
+    "@types/mocha": "~2.2.34",
+    "@types/sinon": "~1.16.33",
+    "chai": "~3.5.0",
+    "mocha": "~3.2.0",
+    "nyc": "~10.0.0",
+    "sinon": "~1.17.6",
+    "ts-node": "~1.7.2",
+    "tslint": "~4.2.0",
+    "typescript": "~2.1.4"
   }
 }
