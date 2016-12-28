@@ -1,1 +1,6 @@
+.nyc_output
+*.log
+build
+coverage
+lib
 node_modules
