@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedParameters": true,
+        "outDir": "lib",
+        "preserveConstEnums": true,
+        "removeComments": true,
+        "rootDirs": [
+            "src",
+            "test"
+        ],
+        "skipLibCheck": true,
+        "strictNullChecks": true,
+        "stripInternal": true,
+        "target": "es6",
+        "types": [
+            "mocha"
+        ]
+    },
+    "include": [
+        "src/index.ts"
+    ]
+}
