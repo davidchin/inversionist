@@ -19,6 +19,7 @@
             "test"
         ],
         "skipLibCheck": true,
+        "sourceMap": true,
         "strictNullChecks": true,
         "stripInternal": true,
         "target": "es5",
