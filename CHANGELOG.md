@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1 - 2016-12-31
+
+- Update package.json to include keywords, repository and homepage.
+- Fix the glob pattern supplied to the linter.
+
 ## 0.2.0 - 2016-12-30
 
 ### Added
