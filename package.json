@@ -1,14 +1,30 @@
 {
   "name": "inversionist",
   "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidchin/inversionist.git"
+  },
+  "homepage": "https://github.com/davidchin/inversionist",
   "description": "A lightweight dependency injection container for JavaScript",
+  "keywords": [
+    "dependency injection",
+    "dependency inversion",
+    "di",
+    "inversion of control",
+    "ioc",
+    "di container",
+    "ioc container"
+  ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "prebuild": "npm run coverage",
     "build": "rm -rf lib && tsc",
     "coverage": "nyc --extension .ts npm test",
-    "lint": "tslint ./**/*.ts",
-    "prepublish": "npm run lint && npm run coverage && npm run build",
+    "lint": "tslint './+(src|test)/**/*.ts'",
+    "prepublish": "npm run build",
+    "pretest": "npm run lint",
     "test": "mocha --compilers ts:ts-node/register ./test"
   },
   "author": "David Chin",
