@@ -6,7 +6,7 @@
     "url": "https://github.com/davidchin/inversionist.git"
   },
   "homepage": "https://github.com/davidchin/inversionist",
-  "description": "A lightweight dependency injection container for JavaScript",
+  "description": "A simple dependency injection container for JavaScript",
   "keywords": [
     "dependency injection",
     "dependency inversion",

@@ -62,7 +62,7 @@ If you are using this library in a TypeScript project, you can specify the retur
 container.get<UserService>('userService');
 ```
 
-## Developement
+## Development
 
 The source code is written in TypeScript. To compile to JavaScript, please run
 
