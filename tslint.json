@@ -18,6 +18,7 @@
             true,
             "spaces"
         ],
+        "interface-name": false,
         "interface-over-type-literal": true,
         "jsdoc-format": true,
         "new-parens": true,
@@ -27,6 +28,7 @@
         "no-duplicate-variable": true,
         "no-eval": true,
         "no-internal-module": true,
+        "no-parameter-properties": true,
         "no-require-imports": true,
         "no-string-throw": true,
         "no-trailing-whitespace": true,
@@ -38,6 +40,7 @@
             "as-needed"
         ],
         "object-literal-shorthand": true,
+        "object-literal-sort-keys": true,
         "one-line": [
             true,
             "check-open-brace",

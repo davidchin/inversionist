@@ -1,13 +1,25 @@
 export class HttpService {}
 
 export class UserService {
-    constructor(private httpService: HttpService) {}
+    private httpService: HttpService;
+
+    constructor(httpService: HttpService) {
+        this.httpService = httpService;
+    }
 }
 
 export class OrderService {
-    constructor(private productService: ProductService) {}
+    private productService: ProductService;
+
+    constructor(productService: ProductService) {
+        this.productService = productService;
+    }
 }
 
 export class ProductService {
-    constructor(private orderService: OrderService) {}
+    private orderService: OrderService;
+
+    constructor(orderService: OrderService) {
+        this.orderService = orderService;
+    }
 }

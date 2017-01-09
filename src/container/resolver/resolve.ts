@@ -5,11 +5,15 @@ import Registry from '../registry/registry';
 import { notFoundError } from '../errors';
 
 class Resolve {
-    constructor(
-        protected container: Container,
-        protected registry: Registry,
-        protected path: Path,
-    ) {}
+    protected container: Container;
+    protected registry: Registry;
+    protected path: Path;
+
+    constructor(container: Container, registry: Registry, path: Path) {
+        this.container = container;
+        this.registry = registry;
+        this.path = path;
+    }
 
     execute<T>(key: Key): T {
         const registration = this.registry.get(key);

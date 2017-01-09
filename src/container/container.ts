@@ -6,16 +6,16 @@ import Scope from './scope';
 
 export default class Container {
     static create(): Container {
-        const registry = new Registry();
-        const resolver = new Resolver();
-
-        return new Container(registry, resolver);
+        return new Container();
     }
 
-    constructor(
-        private registry: Registry,
-        private resolver: Resolver,
-    ) {}
+    private registry: Registry;
+    private resolver: Resolver;
+
+    constructor() {
+        this.registry = new Registry();
+        this.resolver = new Resolver();
+    }
 
     register(key: Key, provider: Provider): Container {
         this.registry.register(key, provider, Scope.Prototype);
