@@ -21,11 +21,11 @@
   "scripts": {
     "prebuild": "npm run coverage",
     "build": "rm -rf lib && tsc",
-    "coverage": "nyc --extension .ts npm test",
+    "coverage": "nyc --reporter text --reporter html --extension .ts npm test",
     "lint": "tslint './+(src|test)/**/*.ts'",
     "prepublish": "npm run build",
     "pretest": "npm run lint",
-    "test": "mocha --compilers ts:ts-node/register ./test"
+    "test": "mocha --recursive --compilers ts:ts-node/register ./test"
   },
   "author": "David Chin",
   "license": "MIT",
