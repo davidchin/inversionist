@@ -2,6 +2,8 @@
 
 Inversionist is a dependency injection container for JavaScript and TypeScript. It is a simple tool to help you build a loosely coupled and testable system.
 
+[![Build Status](https://travis-ci.org/davidchin/inversionist.svg?branch=master)](https://travis-ci.org/davidchin/inversionist)
+
 ## Installation
 
 You can install Inversionist using npm
