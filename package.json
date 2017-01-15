@@ -21,7 +21,7 @@
   "scripts": {
     "prebuild": "npm run coverage",
     "build": "rm -rf lib && tsc",
-    "coverage": "nyc --reporter text --reporter html --extension .ts npm test",
+    "coverage": "nyc --reporter text --reporter html --extension .ts --check-coverage --lines 95 npm test",
     "lint": "tslint './+(src|test)/**/*.ts'",
     "prepublish": "npm run build",
     "pretest": "npm run lint",
