@@ -1,3 +1,4 @@
+import 'mocha';
 import { Container } from '../src';
 import { expect } from 'chai';
 import { HttpService, OrderService, ProductService, UserService } from './mocks';

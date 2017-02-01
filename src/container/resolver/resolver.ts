@@ -6,9 +6,18 @@ import Resolve from './resolve';
 import ResolveSingleton from './resolve-singleton';
 import Scope from '../scope';
 
+/**
+ * A class responsible for resolving registered services.
+ */
 export default class Resolver {
     private path = new Path();
 
+    /**
+     * Resolve a registered service with a key.
+     * @param container - The container used for resolving services
+     * @param registry - The registry of services
+     * @param key - The key to resolve with
+     */
     resolve<T>(container: Container, registry: Registry, key: Key): T {
         const registration = registry.get(key);
         let strategy: Resolve;
