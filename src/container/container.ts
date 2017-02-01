@@ -55,6 +55,18 @@ export default class Container {
     }
 
     /**
+     * Deregister a service provider with a key. If the provider is registered
+     * as a singleton, its cached instance will also get deregistered.
+     * @param key - The key to deregister with
+     * @return `Container` instance itself
+     */
+    deregister(key: Key): Container {
+        this.registry.deregister(key);
+
+        return this;
+    }
+
+    /**
      * Retrieve a service based on a key. If a service cannot be resolved,
      * an error will be thrown.
      * @param key - The key of the registered service

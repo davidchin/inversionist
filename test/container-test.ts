@@ -73,4 +73,13 @@ describe('Container', () => {
 
         expect(outputA).to.equal(outputB);
     });
+
+    it('deregisters an injectable provider', () => {
+        const container = Container.create();
+
+        container.register('httpService', () => new HttpService());
+        container.deregister('httpService');
+
+        expect(() => container.get('httpService')).to.throw(Error);
+    });
 });

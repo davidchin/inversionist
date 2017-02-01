@@ -35,6 +35,15 @@ export default class Registry {
     }
 
     /**
+     * Deregister a service with a key
+     * @param key - The key to deregister with
+     */
+    deregister(key: Key): void {
+        this.registrations.delete(key);
+        this.instances.delete(key);
+    }
+
+    /**
      * Retrieve a service registration with a key
      * @param key - The key used for retrieval
      * @return The service registration
